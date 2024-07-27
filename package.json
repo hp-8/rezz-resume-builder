@@ -1,0 +1,74 @@
+{
+  "name": "pdfegg",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/modifiers": "^6.0.1",
+    "@dnd-kit/sortable": "^7.0.2",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@headlessui/react": "^1.7.19",
+    "@heroicons/react": "^2.1.5",
+    "@tailwindcss/forms": "^0.5.7",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/diff": "^5.2.1",
+    "@types/gm": "^1.25.4",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.104",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/styled-components": "^5.1.34",
+    "@types/uuid": "^9.0.8",
+    "autoprefixer": "^10.4.19",
+    "classnames": "^2.5.1",
+    "diff": "^5.2.0",
+    "firebase": "^9.23.0",
+    "gm": "^1.25.0",
+    "jspdf": "^2.5.1",
+    "postcss": "^8.4.40",
+    "puppeteer": "^18.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.52.1",
+    "react-hot-toast": "^2.4.1",
+    "react-markdown": "^8.0.7",
+    "react-router-dom": "^6.25.1",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.11",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-pdf-test": "npx tsc --project ./src/pdf/render-tests && cp -R ./src/assets/ ./src/pdf/render-tests/build/assets/ && npx webpack-cli --config ./src/pdf/render-tests/webpack.config.js",
+    "pdf-test": "npm run build-pdf-test && npm test ./src/pdf/render-tests --watchAll=false"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
